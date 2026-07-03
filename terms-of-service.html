@@ -1,186 +1,192 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Service - Zimowy Recepcjonista</title>
+<title>Terms of Service — Points Bot</title>
 <style>
   :root {
-    --bg: #0d1117;
-    --card-bg: #161b22;
-    --border: #21262d;
-    --accent: #58a6ff;
-    --text: #c9d1d9;
-    --text-dim: #8b949e;
-    --pill-bg: #1c2128;
+    --bg: #0d0f14;
+    --card: #1a1d24;
+    --card-border: #2a2e38;
+    --accent: #5b9dff;
+    --accent-soft: #5b9dff22;
+    --text: #e6e8ec;
+    --text-dim: #9aa1ac;
+    --text-dimmer: #6b7280;
   }
-
   * { box-sizing: border-box; }
-
   body {
-    background: var(--bg);
+    margin: 0;
+    background: radial-gradient(circle at 50% 0%, #161a22 0%, var(--bg) 55%);
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
+    line-height: 1.65;
+    padding: 40px 20px 100px;
   }
-
-  .container {
-    max-width: 900px;
-    width: 100%;
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 48px 56px;
-  }
+  .wrap { max-width: 820px; margin: 0 auto; }
 
   .nav {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
+    text-align: center;
     margin-bottom: 40px;
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
-
   .nav a {
     color: var(--accent);
     text-decoration: none;
     font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    font-size: 15px;
   }
-
   .nav a:hover { text-decoration: underline; }
 
-  h1.title {
-    text-align: center;
-    color: var(--accent);
-    font-size: 2.4em;
-    margin-bottom: 32px;
+  .doc-header { text-align: center; margin-bottom: 36px; }
+  .doc-header .icon { font-size: 42px; }
+  .doc-header h1 {
+    font-size: 32px;
+    margin: 8px 0 18px;
+    background: linear-gradient(90deg, #6fa8ff, #a68fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .meta { font-size: 14px; color: var(--text-dim); margin: 4px 0; }
+  .meta b { color: var(--text); }
+
+  .intro-box {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin: 24px 0 40px;
+    color: #cfd6e3;
+    font-size: 15px;
   }
 
-  .meta {
-    margin-bottom: 8px;
-    font-size: 1.05em;
-  }
-
-  .meta b { color: #fff; }
-
-  .callout {
-    background: var(--pill-bg);
-    border-left: 4px solid var(--accent);
-    border-radius: 8px;
-    padding: 18px 22px;
-    margin: 28px 0 40px 0;
-    color: var(--text);
-  }
-
+  section { margin-bottom: 44px; }
   h2 {
+    font-size: 22px;
     color: var(--accent);
-    font-size: 1.6em;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 10px;
+    margin-bottom: 18px;
     display: flex;
     align-items: center;
     gap: 10px;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 10px;
-    margin-top: 44px;
   }
 
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 18px 0;
+  .card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 14px;
   }
 
-  ul li {
-    padding: 8px 0;
-    font-size: 1.05em;
+  ul.plain { list-style: none; padding: 0; margin: 0; }
+  ul.plain li {
+    padding: 9px 0;
+    border-bottom: 1px solid var(--card-border);
     display: flex;
-    align-items: flex-start;
     gap: 10px;
+    align-items: flex-start;
+    font-size: 15px;
   }
+  ul.plain li:last-child { border-bottom: none; }
+  ul.plain .emoji { flex-shrink: 0; }
 
-  p.note {
-    color: var(--text-dim);
-    line-height: 1.6;
-  }
+  .note { font-size: 13.5px; color: var(--text-dimmer); margin-top: 14px; line-height: 1.6; }
+  p.desc { margin: 0; font-size: 14.5px; color: var(--text-dim); }
 
-  footer {
-    text-align: center;
-    color: var(--text-dim);
-    margin-top: 56px;
-    font-size: 0.9em;
-  }
+  footer { text-align: center; color: var(--text-dimmer); font-size: 13px; margin-top: 60px; }
 </style>
 </head>
 <body>
-<div class="container">
+<div class="wrap">
 
   <div class="nav">
-    <a href="privacy-policy.html">🔒 Privacy Policy</a>
+    <a href="index.html">🔒 Privacy Policy</a>
     <a href="terms-of-service.html">📄 Terms of Service</a>
   </div>
 
-  <h1 class="title">📄 Terms of Service</h1>
-
-  <div class="meta">🤖 <b>Bot:</b> Zimowy Recepcjonista</div>
-  <div class="meta">📅 <b>Effective Date:</b> July 3, 2026</div>
-
-  <div class="callout">
-    By adding this bot to your Discord server or using its features, you agree to these Terms of Service.
+  <div class="doc-header">
+    <div class="icon">📄</div>
+    <h1>Terms of Service</h1>
+    <div class="meta">🤖 <b>Bot:</b> Points Bot</div>
+    <div class="meta">📅 <b>Effective Date:</b> July 3, 2026</div>
   </div>
 
-  <h2>✅ Acceptable Use</h2>
-  <ul>
-    <li>🛡️ You must comply with Discord's Terms of Service and Community Guidelines while using this bot.</li>
-    <li>🚫 You may not use the bot to abuse, spam, exploit bugs, or interfere with its normal operation.</li>
-    <li>🔧 You may not attempt to reverse-engineer, decompile, or resell the bot's functionality.</li>
-  </ul>
+  <div class="intro-box">
+    By using the Points Bot on any Discord server, you agree to the terms below. If you do not agree, please discontinue use of the bot.
+  </div>
 
-  <h2>⚙️ Service Description</h2>
-  <ul>
-    <li>📊 The bot provides member and admin statistics via live counter channels.</li>
-    <li>✅ The bot provides user verification via role assignment.</li>
-    <li>👋 The bot sends automated welcome and goodbye messages.</li>
-    <li>🤖 The bot provides slash commands and other automation features.</li>
-  </ul>
-  <p class="note">
-    Features may be added, changed, or removed at any time without prior notice, as the bot continues to be developed and improved.
-  </p>
+  <section>
+    <h2>1️⃣ Nature of the Service</h2>
+    <div class="card">
+      <p class="desc">
+        Points Bot is an activity and virtual economy system that operates exclusively within the Discord server on which it is installed. The bot rewards activity (messages, reactions, voice channels, tasks) with virtual points, which can be redeemed for rewards in the server shop, temporary roles, and used in mini-games.
+      </p>
+    </div>
+  </section>
 
-  <h2>🚦 Availability</h2>
-  <p class="note">
-    The bot is provided "as is" and "as available," without warranties of any kind, express or implied.
-    We do not guarantee uninterrupted or error-free operation and are not liable for downtime, data loss, or any damages
-    arising from the use or inability to use the bot.
-  </p>
+  <section>
+    <h2>2️⃣ Virtual Currency</h2>
+    <div class="card">
+      <ul class="plain">
+        <li><span class="emoji">💰</span> Points are earned <b>exclusively through activity</b> on the server — they cannot be purchased with real money.</li>
+        <li><span class="emoji">🚫</span> Points have no monetary value and cannot be exchanged for real currency or assets outside the server.</li>
+        <li><span class="emoji">🔄</span> Point balances, statistics, and related data may be periodically reset in accordance with the rules announced on the server.</li>
+        <li><span class="emoji">⚖️</span> Server staff reserve the right to correct point balances in the event of system errors, abuse, or exploits.</li>
+      </ul>
+    </div>
+  </section>
 
-  <h2>🔒 Data &amp; Privacy</h2>
-  <p class="note">
-    Use of the bot is also governed by our <a href="privacy-policy.html" style="color: var(--accent);">Privacy Policy</a>,
-    which explains what data is collected and how it is used.
-  </p>
+  <section>
+    <h2>3️⃣ Rules of Use</h2>
+    <div class="card">
+      <p class="desc" style="margin-bottom:10px;">The following is prohibited:</p>
+      <ul class="plain">
+        <li><span class="emoji">🚫</span> Exploiting bugs or vulnerabilities in the bot to unfairly gain points</li>
+        <li><span class="emoji">🚫</span> Creating multiple accounts (alt accounts) to bypass limits or artificially generate activity</li>
+        <li><span class="emoji">🚫</span> Spamming messages, reactions, or voice channels solely to farm points</li>
+        <li><span class="emoji">🚫</span> Trading points or virtual items outside the mechanisms provided by the bot</li>
+      </ul>
+      <div class="note">Violation of the above rules may result in point balance resets, revocation of rewards, or other sanctions determined by the administration of the given server.</div>
+    </div>
+  </section>
 
-  <h2>⛔ Termination</h2>
-  <p class="note">
-    We reserve the right to restrict or terminate access to the bot for any server or user found to be violating these
-    Terms of Service or Discord's own policies, at our sole discretion and without prior notice.
-  </p>
+  <section>
+    <h2>4️⃣ Service Availability</h2>
+    <div class="card">
+      <p class="desc">
+        The bot is provided "as is," without any guarantee of uninterrupted operation. We are not liable for downtime, data loss caused by technical failure, or interruptions in feature availability resulting from limitations of the Discord platform.
+      </p>
+    </div>
+  </section>
 
-  <h2>✏️ Changes to These Terms</h2>
-  <p class="note">
-    These Terms of Service may be updated from time to time. Continued use of the bot after changes are published
-    constitutes acceptance of the revised terms.
-  </p>
+  <section>
+    <h2>5️⃣ Changes to These Terms</h2>
+    <div class="card">
+      <p class="desc">
+        These Terms may be updated at any time. Significant changes will be announced on the server. Continued use of the bot after changes take effect constitutes acceptance of those changes.
+      </p>
+    </div>
+  </section>
 
-  <h2>📩 Contact</h2>
-  <p class="note">
-    If you have questions about these Terms of Service, please contact the server administrators.
-  </p>
+  <section>
+    <h2>6️⃣ Contact</h2>
+    <div class="card">
+      <p class="desc">
+        For any questions regarding these Terms, please contact server staff through the ticket system.
+      </p>
+    </div>
+  </section>
 
-  <footer>© 2026 Zimowy Recepcjonista</footer>
+  <footer>
+    Points Bot — Discord Bot &nbsp;•&nbsp; Last updated: July 3, 2026
+  </footer>
 
 </div>
 </body>
